@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
 
 
 data "aws_security_group" "selected" {
- name=allow-all
+ name = "allow-all"
  }
 
  output "securitygroup_id"{
