@@ -7,3 +7,11 @@ resource "aws_instance" "web" {
   }
 }
 
+
+data "aws_security_group" "selected" {
+ name=allow-all
+ }
+
+ output "securitygroup_id"{
+ value = data.aws_security_group.selected
+ }
